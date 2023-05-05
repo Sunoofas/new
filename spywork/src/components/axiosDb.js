@@ -26,4 +26,15 @@ const getTodoList = async()=>{
 
 }
 
-export {addTodoTask,getTodoList}
+const deleteTodoList = async(tasks)=>{
+    const data = {tasks};
+    console.log('data :>> ', data);
+    await axios.delete(`${config.api_base_url}/api/todo`, data)
+    .then((data)=>{
+        console.log(data);
+    })
+    .catch((error)=>{
+        console.log(error);
+})
+}
+export {addTodoTask,getTodoList, deleteTodoList}

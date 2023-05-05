@@ -6,6 +6,7 @@ const todo = require('../controllers/todo');
 //Todo 
 router.post('/todo', todo.putTask);
 router.get('/todo', todo.getTask);
+router.delete('/todo',todo.deleteTask);
 
 
 //convertor
